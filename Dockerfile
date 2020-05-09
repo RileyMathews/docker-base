@@ -5,6 +5,8 @@ RUN yum update -y && \
     unzip \
     git \
     zsh \
+    gcc \
+    make \
     && yum clean all \
     && rm -rf /var/cache/yum
 
