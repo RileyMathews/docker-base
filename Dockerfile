@@ -1,4 +1,4 @@
-FROM centos:8
+FROM amazonlinux:2
 RUN yum update -y && \
     yum install -y \
     curl \
@@ -19,4 +19,5 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
 RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 COPY ./.zshrc .
 
+WORKDIR /code
 CMD [ "/bin/zsh" ]
