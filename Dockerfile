@@ -3,6 +3,7 @@ RUN yum update -y && \
     yum install -y \
     curl \
     unzip \
+    tar \
     git \
     zsh \
     gcc \
